@@ -89,7 +89,7 @@ public class EndlessLevelHandler : MonoBehaviour
     {
         // Pick a random index
         int randomIndex = Random.Range(0, sectionsPool.Length);
-
+        
         bool isNewSectionFound = false;
 
         while (!isNewSectionFound)
