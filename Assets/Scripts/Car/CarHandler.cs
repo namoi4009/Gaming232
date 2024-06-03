@@ -12,9 +12,6 @@ public class CarHandler : MonoBehaviour
     [SerializeField]
     Transform gameModel;
 
-    [SerializeField]
-    MeshRenderer carMeshRender;
-
     // Max values
     float maxSteerVelocity = 2;
     float maxFowardVelocity = 30;
