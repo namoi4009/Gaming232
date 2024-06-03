@@ -375,11 +375,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e43299b72fe671c40a22fa517e99076b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e43299b72fe671c40a22fa517e99076b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.243
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e43299b72fe671c40a22fa517e99076b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -529,6 +529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1315495625}
   gameModel: {fileID: 2009752154}
+  carMeshRender: {fileID: 0}
 --- !u!114 &1315495628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -764,5 +765,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
-  - {fileID: 1315495622}
   - {fileID: 2086041438}
+  - {fileID: 1315495622}
