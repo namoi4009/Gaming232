@@ -14,7 +14,7 @@ public class CarHandler : MonoBehaviour
 
     // Max values
     float maxSteerVelocity = 2;
-    float maxFowardVelocity = 30;
+    float maxFowardVelocity = 20;
 
     // Multiplier
     float accelerateMultiplier = 3f;

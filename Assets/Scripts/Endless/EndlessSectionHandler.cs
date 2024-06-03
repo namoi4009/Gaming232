@@ -19,6 +19,6 @@ public class EndlessSectionHandler : MonoBehaviour
         float lerpPercentage = 1.0f - ((distanceToPlayer - 100) / 150.0f);
         lerpPercentage = Mathf.Clamp01(lerpPercentage);
 
-        transform.position = Vector3.Lerp(new Vector3(transform.position.x, -100, transform.position.z), new Vector3(transform.position.x, 0, transform.position.z), lerpPercentage);
+        transform.position = Vector3.Lerp(new Vector3(transform.position.x, -10, transform.position.z), new Vector3(transform.position.x, 0, transform.position.z), lerpPercentage);
     }
 }

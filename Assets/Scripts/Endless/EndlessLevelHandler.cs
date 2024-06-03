@@ -10,7 +10,7 @@ public class EndlessLevelHandler : MonoBehaviour
     GameObject[] sectionsPool = new GameObject[30];
 
     // Choose from Section Pool to appear on game
-    GameObject[] sections = new GameObject[10];
+    GameObject[] sections = new GameObject[20];
 
     Transform playerCarTransform;
 
@@ -44,7 +44,7 @@ public class EndlessLevelHandler : MonoBehaviour
             GameObject randomSection = GetRandomSectionFromPool();
 
             // Move the section into position and set ACTIVE
-            randomSection.transform.position = new Vector3(sectionsPool[i].transform.position.x, -10, i * sectionLength);
+            randomSection.transform.position = new Vector3(sectionsPool[i].transform.position.x, -20, i * sectionLength);
             randomSection.SetActive(true);
 
             // Set the section chosen into the array
@@ -79,7 +79,7 @@ public class EndlessLevelHandler : MonoBehaviour
                 sections[i] = GetRandomSectionFromPool();
 
                 // Move the new section and activate it
-                sections[i].transform.position = new Vector3(lastSectionPosition.x, -10, lastSectionPosition.z + sectionLength * sections.Length);
+                sections[i].transform.position = new Vector3(lastSectionPosition.x, -20, lastSectionPosition.z + sectionLength * sections.Length);
                 sections[i].SetActive(true);
             }
         }
