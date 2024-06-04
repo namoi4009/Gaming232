@@ -52,8 +52,9 @@ public class CarHandler : MonoBehaviour
         if (isExploded)
         {
             // Apply drag
-            rb.drag = rb.velocity.z * 0.1f;
-            rb.drag = Mathf.Clamp(rb.drag, 1.5f, 10);
+            // rb.drag = rb.velocity.z * 0.1f;
+            // rb.drag = Mathf.Clamp(rb.drag, 1.5f, 10);
+            rb.velocity = Vector3.zero;
 
             // Move towad after exploded
             rb.MovePosition(Vector3.Lerp(transform.position, new Vector3(0, 0, transform.position.z), Time.deltaTime * 0.5f));
@@ -135,13 +136,29 @@ public class CarHandler : MonoBehaviour
         input = inputVector;
     }
 
+    IEnumerator SlowDownTimeCO()
+    {
+        if (Time.timeScale > 0.2f)
+        {
+            Time.timeScale = 0.4f;
+            yield return null;  
+        }
+
+        yield return new WaitForSeconds(1.0f);
+
+        if (Time.timeScale == 0.4f)
+            Time.timeScale = 1.0f;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log($"Hit {collision.collider.name}");
 
         Vector3 velocity = rb.velocity;
-        explodeHandler.Explode(velocity * 45);
+        explodeHandler.Explode(velocity * 15);
 
         isExploded = true;
+
+        StartCoroutine( SlowDownTimeCO() );
     }
 }
