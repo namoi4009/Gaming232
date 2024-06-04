@@ -25,7 +25,7 @@ public class ExplodeHandler : MonoBehaviour
 
     public void Explode(Vector3 externalForce)
     {
-        // originalObject.SetActive(false);
+        originalObject.SetActive(false);
         foreach (Rigidbody rb in rigidbodies)
         {
             rb.transform.parent = null;
