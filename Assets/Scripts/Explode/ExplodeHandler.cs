@@ -37,6 +37,9 @@ public class ExplodeHandler : MonoBehaviour
 
             rb.AddForce(Vector3.up * 200 +  externalForce, ForceMode.Force);
             rb.AddTorque(Random.insideUnitSphere * 0.5f, ForceMode.Impulse);
+
+            // Change the tag so other object can explode after being hit by a car part
+            rb.gameObject.tag = "CarPart";
         }
     }
 }

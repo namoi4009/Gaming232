@@ -30,11 +30,12 @@ public class CarHandler : MonoBehaviour
     // Explode State
     bool isExploded = false;
 
+    bool isPlayer = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        isPlayer = CompareTag("Player");
     }
 
     // Update is called once per frames
@@ -136,6 +137,11 @@ public class CarHandler : MonoBehaviour
         input = inputVector;
     }
 
+    public void SetMaxSpeed(float newMaxSpeed)
+    {
+        maxFowardVelocity = newMaxSpeed;
+    }
+
     IEnumerator SlowDownTimeCO()
     {
         if (Time.timeScale > 0.2f)
@@ -152,7 +158,15 @@ public class CarHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log($"Hit {collision.collider.name}");
+        if (!isPlayer)
+        {
+            // AI cars will only explode when they hit player car or car part
+            if (collision.transform.root.CompareTag("Untagged"))
+                return;
+
+            if (collision.transform.root.CompareTag("CarAI"))
+                return;
+        }
 
         Vector3 velocity = rb.velocity;
         explodeHandler.Explode(velocity * 15);
