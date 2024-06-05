@@ -35,7 +35,11 @@ public class ExplodeHandler : MonoBehaviour
             rb.isKinematic = false;
             rb.interpolation = RigidbodyInterpolation.Interpolate;
 
+            // Parts explode upward direction
             rb.AddForce(Vector3.up * 200 +  externalForce, ForceMode.Force);
+            // Parts explode forward direction
+            rb.AddForce(Vector3.forward * 90 + externalForce, ForceMode.Force);
+            // Parts rotate when explode
             rb.AddTorque(Random.insideUnitSphere * 0.5f, ForceMode.Impulse);
 
             // Change the tag so other object can explode after being hit by a car part
