@@ -31,7 +31,8 @@ public class ScoreManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) // If the car passing other car, point increases
     {
-        if (other.name.Equals("car_hatchback"))
+        // if (other.name.Equals("car_hatchback"))
+        if (other.CompareTag("CarAI"))
         {
             highscore.Score++;
             ShowScore();

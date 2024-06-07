@@ -266,6 +266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: car_stationwagon
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a027c712312a7f54cb50927112d68b2e, type: 3}
+      propertyPath: m_TagString
+      value: CarAI
+      objectReference: {fileID: 0}
     - target: {fileID: 1857042276223755241, guid: a027c712312a7f54cb50927112d68b2e, type: 3}
       propertyPath: m_IsActive
       value: 0

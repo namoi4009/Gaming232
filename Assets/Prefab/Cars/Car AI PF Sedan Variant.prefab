@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8090005859038007727, guid: 25fb8166f2a3c734c880d17bf9aee61a, type: 3}
+      propertyPath: m_TagString
+      value: CarAI
+      objectReference: {fileID: 0}
     - target: {fileID: -5556218220344185968, guid: 25fb8166f2a3c734c880d17bf9aee61a, type: 3}
       propertyPath: m_TagString
       value: CarPart

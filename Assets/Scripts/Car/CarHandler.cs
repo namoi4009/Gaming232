@@ -14,6 +14,8 @@ public class CarHandler : MonoBehaviour
 
     IngameSound audioManager;
 
+    bool gameEnded = false;
+
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Ingame_Sound").GetComponent<IngameSound>();
@@ -164,9 +166,6 @@ public class CarHandler : MonoBehaviour
 
     IEnumerator SlowDownTimeCO()
     {
-        audioManager.StopSFX();
-        audioManager.PlaySFX_OneTime(audioManager.CarCrash);
-
         if (Time.timeScale > 0.2f)
         {
             Time.timeScale = 0.4f;
@@ -179,7 +178,11 @@ public class CarHandler : MonoBehaviour
             Time.timeScale = 1f;
 
         yield return new WaitForSeconds(0.5f);
-        audioManager.PlaySFX_OneTime(audioManager.LosingGame);
+        if (!gameEnded)
+        {
+            audioManager.PlaySFX_OneTime(audioManager.LosingGame);
+            gameEnded = true;
+        }
         ScoreUI.Instance.ViewEndingPanel();
     }
 
@@ -200,6 +203,9 @@ public class CarHandler : MonoBehaviour
 
         isExploded = true;
 
+        audioManager.StopSFX();
+        audioManager.PlaySFX_OneTime(audioManager.CarCrash);
+        
         StartCoroutine( SlowDownTimeCO() );
     }
 
