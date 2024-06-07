@@ -14,7 +14,7 @@ public class CarHandler : MonoBehaviour
 
     // Max values
     float maxSteerVelocity = 2;
-    float maxFowardVelocity = 20;
+    float maxFowardVelocity = 40;
 
     // Multiplier
     float accelerateMultiplier = 3f;
@@ -25,9 +25,12 @@ public class CarHandler : MonoBehaviour
     Vector2 input = Vector2.zero;
 
     // Explode State
-    bool isExploded = false;
+    private bool isExploded = false;
 
     bool isPlayer = true;
+
+    // Force to Explode?
+    private bool isForceToExplode = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,12 @@ public class CarHandler : MonoBehaviour
     // Update is called once per frames
     void Update()
     {
+        if (isForceToExplode)
+        {
+            forceToExplode();
+            return;
+        }
+
         if (isExploded) return;
 
         // Rotate car when turning
@@ -125,7 +134,6 @@ public class CarHandler : MonoBehaviour
         {
             // Auto center car
             rb.velocity = Vector3.Lerp(rb.velocity, new Vector3(0, 0 ,rb.velocity.z), Time.fixedDeltaTime * 3);
-
         }
     }
 
@@ -141,6 +149,11 @@ public class CarHandler : MonoBehaviour
         maxFowardVelocity = newMaxSpeed;
     }
 
+    public void SetForceToExplode()
+    {
+        isForceToExplode = true;
+    }
+
     IEnumerator SlowDownTimeCO()
     {
         if (Time.timeScale > 0.2f)
@@ -153,7 +166,9 @@ public class CarHandler : MonoBehaviour
 
         if (Time.timeScale == 0.4f)
             Time.timeScale = 1f;
-        ScoreUI.Instance.ViewPanel();
+        
+        yield return new WaitForSeconds(0.5f);
+        ScoreUI.Instance.ViewEndingPanel();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -169,6 +184,16 @@ public class CarHandler : MonoBehaviour
         }
 
         Vector3 velocity = rb.velocity;
+        explodeHandler.Explode(velocity * 15);
+
+        isExploded = true;
+
+        StartCoroutine( SlowDownTimeCO() );
+    }
+
+    private void forceToExplode()
+    {
+        Vector3 velocity = new Vector3(0.01f, 0.01f, 0.01f);
         explodeHandler.Explode(velocity * 15);
 
         isExploded = true;

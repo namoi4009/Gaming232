@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1729722763954702869, guid: 94982a221dee4114aa7c459bfd092c8d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6090902050596962628, guid: 94982a221dee4114aa7c459bfd092c8d, type: 3}
       propertyPath: m_Name
       value: Car AI PF Variant

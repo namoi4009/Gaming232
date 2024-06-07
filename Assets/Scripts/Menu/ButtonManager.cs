@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    public void RestartGame()
+    public void RestartGame() // Handle Restart Button
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("Stage");
     }
-
-    public void BackToMenu()
+    
+    public void BackToMenu() // Handle Menu Button
     {
         SceneManager.LoadScene("Main Menu");
     }
