@@ -12,6 +12,14 @@ public class CarHandler : MonoBehaviour
 
     [SerializeField] ExplodeHandler explodeHandler;
 
+    IngameSound audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Ingame_Sound").GetComponent<IngameSound>();
+        audioManager.PlaySFX_Loop(audioManager.Ingame_Background);
+    }
+
     // Max values
     float maxSteerVelocity = 2;
     float maxFowardVelocity = 40;
@@ -156,6 +164,9 @@ public class CarHandler : MonoBehaviour
 
     IEnumerator SlowDownTimeCO()
     {
+        audioManager.StopSFX();
+        audioManager.PlaySFX_OneTime(audioManager.CarCrash);
+
         if (Time.timeScale > 0.2f)
         {
             Time.timeScale = 0.4f;
@@ -166,8 +177,9 @@ public class CarHandler : MonoBehaviour
 
         if (Time.timeScale == 0.4f)
             Time.timeScale = 1f;
-        
+
         yield return new WaitForSeconds(0.5f);
+        audioManager.PlaySFX_OneTime(audioManager.LosingGame);
         ScoreUI.Instance.ViewEndingPanel();
     }
 

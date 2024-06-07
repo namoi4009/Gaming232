@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CarAI
   - CarPart
+  - Audio
+  - Ingame_Sound
   layers:
   - Default
   - TransparentFX
