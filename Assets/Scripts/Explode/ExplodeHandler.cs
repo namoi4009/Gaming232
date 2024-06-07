@@ -18,11 +18,6 @@ public class ExplodeHandler : MonoBehaviour
         rigidbodies = model.GetComponentsInChildren<Rigidbody>(true);
     }
 
-    void Start()
-    {
-        
-    }
-
     public void Explode(Vector3 externalForce)
     {
         originalObject.SetActive(false);

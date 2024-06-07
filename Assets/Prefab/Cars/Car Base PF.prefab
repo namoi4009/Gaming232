@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 7811298888395157033}
   - component: {fileID: 1729722763954702869}
   - component: {fileID: 3398954505584174071}
-  - component: {fileID: 6355691590121240354}
   - component: {fileID: 4061532419808963472}
   - component: {fileID: 407091121089622841}
   m_Layer: 7
@@ -111,19 +110,6 @@ MonoBehaviour:
   rb: {fileID: 1729722763954702869}
   gameModel: {fileID: 3504179062733589349}
   explodeHandler: {fileID: 4061532419808963472}
---- !u!114 &6355691590121240354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6090902050596962628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464747f177f61a44891cd88ef51f92f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carHandler: {fileID: 3398954505584174071}
 --- !u!114 &4061532419808963472
 MonoBehaviour:
   m_ObjectHideFlags: 0

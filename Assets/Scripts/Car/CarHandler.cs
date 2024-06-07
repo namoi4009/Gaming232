@@ -6,14 +6,11 @@ using UnityEngine;
 
 public class CarHandler : MonoBehaviour
 {
-    [SerializeField]
-    Rigidbody rb;
+    [SerializeField] Rigidbody rb;
 
-    [SerializeField]
-    Transform gameModel;
+    [SerializeField] Transform gameModel;
 
-    [SerializeField]
-    ExplodeHandler explodeHandler;
+    [SerializeField] ExplodeHandler explodeHandler;
 
     // Max values
     float maxSteerVelocity = 2;
@@ -45,6 +42,8 @@ public class CarHandler : MonoBehaviour
 
         // Rotate car when turning
         gameModel.transform.rotation = Quaternion.Euler(0, rb.velocity.x * 5, 0);
+
+        setInput(InputManager.Instance.MoveInput);
     }
 
     private void FixedUpdate()
@@ -153,7 +152,8 @@ public class CarHandler : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
 
         if (Time.timeScale == 0.4f)
-            Time.timeScale = 1.0f;
+            Time.timeScale = 1f;
+        ScoreUI.Instance.ViewPanel();
     }
 
     private void OnCollisionEnter(Collision collision)
