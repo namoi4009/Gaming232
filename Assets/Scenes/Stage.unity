@@ -2162,7 +2162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12218327, y: -0.000000017077465, z: 0.0000000021023319, w: 0.9925076}
+  m_LocalRotation: {x: 0.12218325, y: 0.000000017077465, z: -0.0000000021023316, w: 0.9925076}
   m_LocalPosition: {x: 0, y: 1, z: -12.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2232,7 +2232,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CarsAIPrefab:
-  - {fileID: 7683526573358408629, guid: a1b874f68e8d26a4fa8a14d07eb1ac9c, type: 3}
+  - {fileID: 6881184397029693283, guid: c3d250906ca82f54790e91c705cb2f56, type: 3}
+  - {fileID: 2613280153968250029, guid: 64cf3e6325edc7f4f858eefe66a08c0c, type: 3}
+  - {fileID: 1603318137736366951, guid: 61c1cc4b41967ae468d1832269beadc2, type: 3}
   otherCarsLayerMask:
     serializedVersion: 2
     m_Bits: 128
@@ -2284,6 +2286,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 273035238407687790, guid: 94982a221dee4114aa7c459bfd092c8d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2839916093938863132, guid: a26d2686e5ebd5c44b872faf8cf19d92, type: 3}
     - target: {fileID: 745323176683805006, guid: 94982a221dee4114aa7c459bfd092c8d, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2292,6 +2298,14 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1463991068943691292, guid: 94982a221dee4114aa7c459bfd092c8d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 878862460271134729, guid: a26d2686e5ebd5c44b872faf8cf19d92, type: 3}
+    - target: {fileID: 2168309230680656116, guid: 94982a221dee4114aa7c459bfd092c8d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2319102611782490184, guid: a26d2686e5ebd5c44b872faf8cf19d92, type: 3}
     - target: {fileID: 2185266904800246322, guid: 94982a221dee4114aa7c459bfd092c8d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -2416,6 +2430,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8000995043489740809, guid: 94982a221dee4114aa7c459bfd092c8d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 7453040186285120137, guid: a26d2686e5ebd5c44b872faf8cf19d92, type: 3}
     - target: {fileID: 8042328884346675685, guid: 94982a221dee4114aa7c459bfd092c8d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -3732,7 +3750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086041436}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12218327, y: -0.000000017077465, z: 0.0000000021023319, w: 0.9925076}
+  m_LocalRotation: {x: 0.12218325, y: 0.000000017077465, z: -0.0000000021023316, w: 0.9925076}
   m_LocalPosition: {x: 0, y: 1, z: -12.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
