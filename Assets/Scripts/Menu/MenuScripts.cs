@@ -14,7 +14,7 @@ public class MenuScripts : MonoBehaviour
     {
         #if UNITY_STANDALONE
             Application.Quit();
-        #endif
+        #endif  
 
         #if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false;
