@@ -13,6 +13,8 @@ public class PauseGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (carHandler.isGameEnded()) return;
+
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyUp(KeyCode.P))
         {
             if (isPaused)

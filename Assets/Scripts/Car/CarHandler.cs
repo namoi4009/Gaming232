@@ -14,7 +14,9 @@ public class CarHandler : MonoBehaviour
 
     IngameSound audioManager;
 
-    bool gameEnded = false;
+    private bool gameEnded = false;
+
+    public bool isGameEnded() { return gameEnded; }
 
     private void Awake()
     {
@@ -70,9 +72,7 @@ public class CarHandler : MonoBehaviour
         // Is exploded
         if (isExploded)
         {
-            // Apply drag
-            // rb.drag = rb.velocity.z * 0.1f;
-            // rb.drag = Mathf.Clamp(rb.drag, 1.5f, 10);
+            // Set the velocity to zero
             rb.velocity = Vector3.zero;
 
             // Move towad after exploded
@@ -164,12 +164,22 @@ public class CarHandler : MonoBehaviour
         isForceToExplode = true;
     }
 
-    IEnumerator SlowDownTimeCO()
+    IEnumerator SlowDownTimeCO() // Slowdown time to end game
     {
         if (Time.timeScale > 0.2f)
         {
             Time.timeScale = 0.4f;
             yield return null;  
+        }
+
+        // Player achive higher score than last highest score
+        if (!gameEnded && ScoreManager.Instance.isHigherScore()) 
+        {
+            // Enable Higher Score Panel
+            ScoreUI.Instance.ViewHigherScorePanel();
+            // Play Congrats sound
+            audioManager.PlaySFX_OneTime(audioManager.Congrats);
+            gameEnded = true;
         }
 
         yield return new WaitForSeconds(1.0f);
@@ -178,7 +188,7 @@ public class CarHandler : MonoBehaviour
             Time.timeScale = 1f;
 
         yield return new WaitForSeconds(0.5f);
-        if (!gameEnded)
+        if (!gameEnded && !ScoreManager.Instance.isHigherScore())
         {
             audioManager.PlaySFX_OneTime(audioManager.LosingGame);
             gameEnded = true;

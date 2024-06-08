@@ -12,6 +12,7 @@ public class IngameSound : MonoBehaviour
     [SerializeField] public AudioClip LosingGame;
     [SerializeField] public AudioClip CarCrash;
     [SerializeField] public AudioClip RoadNoise;
+    [SerializeField] public AudioClip Congrats;
 
     public void PlaySFX_OneTime(AudioClip clip)
     {

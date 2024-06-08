@@ -14,6 +14,7 @@ public class ScoreUI : MonoBehaviour
     [SerializeField] private GameObject endPanel;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject PauseButton;
+    [SerializeField] private GameObject newHighScorePanel;
     [SerializeField] private GameObject scoreBox;
 
     private static ScoreUI instance;
@@ -36,6 +37,7 @@ public class ScoreUI : MonoBehaviour
 
     public void ViewEndingPanel()
     {
+        newHighScorePanel.SetActive(false);
         scoreBox.SetActive(false);
         PauseButton.SetActive(false);
         endPanel.SetActive(true);
@@ -54,5 +56,10 @@ public class ScoreUI : MonoBehaviour
     {
         pausePanel.SetActive(false);
         Time.timeScale = 1.0f;
+    }
+
+    public void ViewHigherScorePanel()
+    {
+        newHighScorePanel.SetActive(true);
     }
 }

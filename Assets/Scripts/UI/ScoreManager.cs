@@ -18,10 +18,11 @@ public class ScoreManager : MonoBehaviour
         highscore.Score = 0;
     }
 
-    public void SetHighestScore()
+    public bool isHigherScore() // Check higher score
     {
-        if (highscore.Score < highscore.HighestScore) return;
+        if (highscore.Score < highscore.HighestScore) return false;
         highscore.HighestScore = highscore.Score;
+        return true;
     }
 
     public void ShowScore() // For debugging
@@ -31,12 +32,11 @@ public class ScoreManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) // If the car passing other car, point increases
     {
-        // if (other.name.Equals("car_hatchback"))
         if (other.CompareTag("CarAI"))
         {
             highscore.Score++;
             ShowScore();
-            SetHighestScore();
+            // SetHighestScore();
         }
     }
 }
