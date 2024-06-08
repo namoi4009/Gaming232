@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class AIHandler : MonoBehaviour
 {
     [SerializeField]
     CarHandler carHandler;
@@ -12,7 +12,7 @@ public class NewBehaviourScript : MonoBehaviour
     LayerMask otherCarsLayerMask;
 
     [SerializeField]
-    MeshCollider meshCollider;
+    BoxCollider boxCollider;
 
     RaycastHit[] raycastHits = new RaycastHit[1];
     bool isCarAhead = false;
@@ -63,9 +63,9 @@ public class NewBehaviourScript : MonoBehaviour
 
     bool checkIfOtherCarsIsAhead()
     {
-        meshCollider.enabled = false;
+        boxCollider.enabled = false;
         int numberOfHits = Physics.BoxCastNonAlloc(transform.position, Vector3.one * 0.25f, transform.forward, raycastHits, Quaternion.identity, 2, otherCarsLayerMask);
-        meshCollider.enabled = true;
+        boxCollider.enabled = true;
 
         if (numberOfHits > 0)
             return true;

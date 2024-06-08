@@ -24,7 +24,7 @@ public class ExplodeHandler : MonoBehaviour
         foreach (Rigidbody rb in rigidbodies)
         {
             rb.transform.parent = null;
-            rb.GetComponent<MeshCollider>().enabled = true;
+            rb.GetComponent<BoxCollider>().enabled = true;
 
             rb.gameObject.SetActive(true);
             rb.isKinematic = false;

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2174822391780865313}
   - component: {fileID: 6100115105249053006}
   - component: {fileID: 538478087934661231}
-  - component: {fileID: 7945391167562383898}
+  - component: {fileID: 4335070253422765056}
   m_Layer: 0
   m_Name: car_police
   m_TagString: CarAI
@@ -88,8 +88,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7945391167562383898
-MeshCollider:
+--- !u!65 &4335070253422765056
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -106,10 +106,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8998900221243770700, guid: adb8c182e1b51f1428d9dd3f17fc5cf8, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.41896087, y: 0.93807286, z: 0.38159233}
+  m_Center: {x: -0.000004924834, y: 0.003298461, z: 0.16079618}
 --- !u!1 &3844832618581309648
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +121,7 @@ GameObject:
   - component: {fileID: 7140621914755723447}
   - component: {fileID: 4839374774539557104}
   - component: {fileID: 3691818970438371487}
-  - component: {fileID: 2296151319737190612}
+  - component: {fileID: 2202083883584876242}
   m_Layer: 0
   m_Name: car_police_wheel_front_left
   m_TagString: Untagged
@@ -222,8 +221,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &2296151319737190612
-MeshCollider:
+--- !u!65 &2202083883584876242
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -240,10 +239,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -777911322232173037, guid: adb8c182e1b51f1428d9dd3f17fc5cf8, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.06123203, y: 0.14459921, z: 0.14459921}
+  m_Center: {x: 0.000014116988, y: 0.000016242264, z: -0.0000007562338}
 --- !u!1 &4777290240834278403
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +254,7 @@ GameObject:
   - component: {fileID: 7266466871246862939}
   - component: {fileID: 7658716254343844128}
   - component: {fileID: 2209325527132898206}
-  - component: {fileID: 5796149143279923183}
+  - component: {fileID: 1597721921747092854}
   m_Layer: 0
   m_Name: car_police_wheel_rear_left
   m_TagString: Untagged
@@ -356,8 +354,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &5796149143279923183
-MeshCollider:
+--- !u!65 &1597721921747092854
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -374,10 +372,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4234626797452551189, guid: adb8c182e1b51f1428d9dd3f17fc5cf8, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.06123203, y: 0.14459921, z: 0.14459921}
+  m_Center: {x: 0.000014116988, y: 0.000016242264, z: -0.0000007562338}
 --- !u!1 &4791230430979950792
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +387,7 @@ GameObject:
   - component: {fileID: 6939735945059370840}
   - component: {fileID: 1380558650035457951}
   - component: {fileID: 4398492487512144744}
-  - component: {fileID: 1468115738142612380}
+  - component: {fileID: 8420726390659521984}
   m_Layer: 0
   m_Name: car_police.Left.Rear
   m_TagString: CarPart
@@ -490,8 +487,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &1468115738142612380
-MeshCollider:
+--- !u!65 &8420726390659521984
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -508,10 +505,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5096845588096760910, guid: adb8c182e1b51f1428d9dd3f17fc5cf8, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.20948537, y: 0.4741665, z: 0.38159233}
+  m_Center: {x: -0.10474268, y: 0.23525164, z: 0.16079618}
 --- !u!1 &5165964347179498630
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,7 +684,7 @@ MonoBehaviour:
   otherCarsLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  meshCollider: {fileID: 7945391167562383898}
+  boxCollider: {fileID: 4335070253422765056}
 --- !u!1 &7086700600891328854
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,7 +697,7 @@ GameObject:
   - component: {fileID: 1004163060650474450}
   - component: {fileID: 1416090791120174186}
   - component: {fileID: 8557214256971503153}
-  - component: {fileID: 9015198421556029832}
+  - component: {fileID: 8781937081999317761}
   m_Layer: 0
   m_Name: car_police_wheel_rear_right
   m_TagString: Untagged
@@ -801,8 +797,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &9015198421556029832
-MeshCollider:
+--- !u!65 &8781937081999317761
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -819,10 +815,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5902087424335824334, guid: adb8c182e1b51f1428d9dd3f17fc5cf8, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.06123203, y: 0.14459921, z: 0.14459921}
+  m_Center: {x: -0.000014116988, y: 0.000016242264, z: -0.0000007562338}
 --- !u!1 &7320253231896665430
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +830,7 @@ GameObject:
   - component: {fileID: 6948715001225828985}
   - component: {fileID: 2707643790481756429}
   - component: {fileID: 673916721399397491}
-  - component: {fileID: 6488558147655450609}
+  - component: {fileID: 4312925324031381397}
   m_Layer: 0
   m_Name: car_police.Right.Front
   m_TagString: CarPart
@@ -935,8 +930,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &6488558147655450609
-MeshCollider:
+--- !u!65 &4312925324031381397
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -953,10 +948,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8319514158145242915, guid: adb8c182e1b51f1428d9dd3f17fc5cf8, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.20947555, y: 0.46573797, z: 0.3377213}
+  m_Center: {x: 0.104737744, y: -0.23286898, z: 0.13886064}
 --- !u!1 &7329171296059398556
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,7 +963,7 @@ GameObject:
   - component: {fileID: 6498492502318027118}
   - component: {fileID: 7432185988113917571}
   - component: {fileID: 1493800978261878444}
-  - component: {fileID: 2515649788880759969}
+  - component: {fileID: 2576418346512567150}
   m_Layer: 0
   m_Name: car_police.Left.Front
   m_TagString: CarPart
@@ -1069,8 +1063,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &2515649788880759969
-MeshCollider:
+--- !u!65 &2576418346512567150
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1087,10 +1081,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 9203587875340672128, guid: adb8c182e1b51f1428d9dd3f17fc5cf8, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.20948328, y: 0.46354002, z: 0.3377213}
+  m_Center: {x: -0.104741625, y: -0.23396796, z: 0.13886064}
 --- !u!1 &7620252219919723208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,7 +1096,7 @@ GameObject:
   - component: {fileID: 8787616012840344919}
   - component: {fileID: 5129191398743041303}
   - component: {fileID: 4042543355092438695}
-  - component: {fileID: 225692071699384184}
+  - component: {fileID: 1648466294740870624}
   m_Layer: 0
   m_Name: car_police_wheel_front_right
   m_TagString: Untagged
@@ -1203,8 +1196,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &225692071699384184
-MeshCollider:
+--- !u!65 &1648466294740870624
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1221,10 +1214,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2850520760400254123, guid: adb8c182e1b51f1428d9dd3f17fc5cf8, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.06123203, y: 0.14459921, z: 0.14459921}
+  m_Center: {x: -0.000014116988, y: 0.000016242264, z: -0.0000007562338}
 --- !u!1 &7741162805739979058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,7 +1229,7 @@ GameObject:
   - component: {fileID: 6323381197393529769}
   - component: {fileID: 6806334960457741655}
   - component: {fileID: 6544722238056554226}
-  - component: {fileID: 1168928715873005154}
+  - component: {fileID: 3321055697223462928}
   m_Layer: 0
   m_Name: car_police.Right.Rear
   m_TagString: CarPart
@@ -1337,8 +1329,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &1168928715873005154
-MeshCollider:
+--- !u!65 &3321055697223462928
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1355,7 +1347,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6050538317823134457, guid: adb8c182e1b51f1428d9dd3f17fc5cf8, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.20947343, y: 0.4723349, z: 0.38159233}
+  m_Center: {x: 0.1047367, y: 0.23616745, z: 0.16079618}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using TMPro;
-using UnityEditor.Rendering;
+//using UnityEditor.Rendering;
 using UnityEngine;
 
 public class ScoreUI : MonoBehaviour
