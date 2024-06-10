@@ -173,7 +173,15 @@ public class CarHandler : MonoBehaviour
         }
 
         // Player achive higher score than last highest score
-        if (!gameEnded && ScoreManager.Instance.isHigherScore()) 
+        
+        yield return new WaitForSeconds(1.0f);  
+
+        if (Time.timeScale == 0.4f)
+            Time.timeScale = 1f;
+
+        yield return new WaitForSeconds(0.5f);
+
+        if (ScoreManager.Instance.isHigherScore())
         {
             // Enable Higher Score Panel
             ScoreUI.Instance.ViewHigherScorePanel();
@@ -181,18 +189,14 @@ public class CarHandler : MonoBehaviour
             audioManager.PlaySFX_OneTime(audioManager.Congrats);
             gameEnded = true;
         }
-
-        yield return new WaitForSeconds(1.0f);
-
-        if (Time.timeScale == 0.4f)
-            Time.timeScale = 1f;
-
-        yield return new WaitForSeconds(0.5f);
-        if (!gameEnded && !ScoreManager.Instance.isHigherScore())
+        else
         {
             audioManager.PlaySFX_OneTime(audioManager.LosingGame);
             gameEnded = true;
         }
+
+        yield return new WaitForSeconds(2f);
+
         ScoreUI.Instance.ViewEndingPanel();
     }
 

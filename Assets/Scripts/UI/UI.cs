@@ -58,7 +58,7 @@ public class ScoreUI : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
-    public void ViewHigherScorePanel()
+    public void ViewHigherScorePanel() // when player crash car at a highscore
     {
         newHighScorePanel.SetActive(true);
     }

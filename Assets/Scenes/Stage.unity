@@ -2558,7 +2558,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12218325, y: 0.000000017077465, z: -0.0000000021023316, w: 0.9925076}
+  m_LocalRotation: {x: 0.12218327, y: -0.000000017077465, z: 0.0000000021023319, w: 0.9925076}
   m_LocalPosition: {x: 0, y: 1, z: -12.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2631,6 +2631,7 @@ MonoBehaviour:
   - {fileID: 6881184397029693283, guid: c3d250906ca82f54790e91c705cb2f56, type: 3}
   - {fileID: 2613280153968250029, guid: 64cf3e6325edc7f4f858eefe66a08c0c, type: 3}
   - {fileID: 1603318137736366951, guid: 61c1cc4b41967ae468d1832269beadc2, type: 3}
+  - {fileID: 7103696883897165615, guid: d0e5bfa1b18b8114286d779868958e82, type: 3}
   otherCarsLayerMask:
     serializedVersion: 2
     m_Bits: 128
@@ -4566,7 +4567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086041436}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12218325, y: 0.000000017077465, z: -0.0000000021023316, w: 0.9925076}
+  m_LocalRotation: {x: 0.12218327, y: -0.000000017077465, z: 0.0000000021023319, w: 0.9925076}
   m_LocalPosition: {x: 0, y: 1, z: -12.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
