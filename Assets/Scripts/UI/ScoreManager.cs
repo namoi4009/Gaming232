@@ -20,7 +20,7 @@ public class ScoreManager : MonoBehaviour
 
     public bool isHigherScore() // Check higher score
     {
-        if (highscore.Score < highscore.HighestScore) return false;
+        if (highscore.Score <= highscore.HighestScore) return false;
         highscore.HighestScore = highscore.Score;
         return true;
     }
