@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuScripts : MonoBehaviour
 {
+    [SerializeField] GameObject GuidePanel;
+
     AudioManager audioManager;
 
     private void Awake()
@@ -31,10 +33,20 @@ public class MenuScripts : MonoBehaviour
             audioManager.PlaySFX_OneTime(audioManager.MouseClick);
         #if UNITY_STANDALONE
         Application.Quit();
-        #endif  
+        #endif
 
         #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
         #endif
+    }
+
+    public void GuideGame()
+    {
+        GuidePanel.SetActive(true);
+    }
+
+    public void HideGuideGame()
+    {
+        GuidePanel.SetActive(false);
     }
 }
