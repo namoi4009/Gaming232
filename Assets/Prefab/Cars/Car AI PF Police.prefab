@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 3721290314319642039}
   - component: {fileID: 1035718869952406814}
   m_Layer: 7
-  m_Name: Car AI PF Police Variant
+  m_Name: Car AI PF Police
   m_TagString: CarAI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

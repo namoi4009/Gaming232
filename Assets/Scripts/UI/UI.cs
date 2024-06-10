@@ -19,7 +19,14 @@ public class ScoreUI : MonoBehaviour
 
     private static ScoreUI instance;
 
-    public static ScoreUI Instance { get => instance;  }
+    public static ScoreUI Instance {
+        get
+        {
+            if (instance == null)
+                instance = new ScoreUI();
+            return instance;
+        }
+    }
     private void Awake()
     {
         instance = this;

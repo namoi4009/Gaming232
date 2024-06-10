@@ -9,7 +9,15 @@ public class ScoreManager : MonoBehaviour
     private static ScoreManager instance;
 
     [SerializeField] private Score_SO highscore;
-    public static ScoreManager Instance { get => instance; }
+    public static ScoreManager Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = new ScoreManager();
+            return instance;
+        }
+    }
     public Score_SO Highscore { get => highscore; }
 
     private void Awake() // Initiate highest score at the beginning = 0
@@ -21,8 +29,12 @@ public class ScoreManager : MonoBehaviour
     public bool isHigherScore() // Check higher score
     {
         if (highscore.Score <= highscore.HighestScore) return false;
-        highscore.HighestScore = highscore.Score;
         return true;
+    }
+
+    public void setHigherScore()
+    {
+        highscore.HighestScore = highscore.Score;
     }
 
     public void ShowScore() // For debugging

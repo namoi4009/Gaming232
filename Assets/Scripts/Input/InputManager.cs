@@ -8,7 +8,15 @@ public class InputManager : MonoBehaviour
 {
     // Instance
     private static InputManager instance;
-    public static InputManager Instance { get => instance; }
+    public static InputManager Instance 
+    { 
+        get
+        {
+            if (instance == null)
+                instance = new InputManager();
+            return instance;
+        }
+    }
 
     // Move Vector
     [SerializeField] private Vector2 moveInput;

@@ -16,6 +16,8 @@ public class CarHandler : MonoBehaviour
 
     private bool gameEnded = false;
 
+    private bool win = false;
+
     public bool isGameEnded() { return gameEnded; }
 
     private void Awake()
@@ -189,15 +191,16 @@ public class CarHandler : MonoBehaviour
             // Play Congrats sound
             audioManager.PlaySFX_OneTime(audioManager.Congrats);
             gameEnded = true;
+            win = true;
         }
-        else
+        if (!win)
         {
             audioManager.PlaySFX_OneTime(audioManager.LosingGame);
             gameEnded = true;
         }
 
         yield return new WaitForSeconds(1f);
-
+        ScoreManager.Instance.setHigherScore();
         ScoreUI.Instance.ViewEndingPanel();
     }
 

@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: CarPart
       objectReference: {fileID: 0}
+    - target: {fileID: 3974735337558221305, guid: 9f9027f41bff4864d90e6dd571de9bf4, type: 3}
+      propertyPath: m_TagString
+      value: CarAI
+      objectReference: {fileID: 0}
     - target: {fileID: 4457450447234275575, guid: 9f9027f41bff4864d90e6dd571de9bf4, type: 3}
       propertyPath: m_IsActive
       value: 0

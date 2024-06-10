@@ -49,8 +49,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8090005859038007727, guid: 25fb8166f2a3c734c880d17bf9aee61a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8090005859038007727, guid: 25fb8166f2a3c734c880d17bf9aee61a, type: 3}
       propertyPath: m_TagString
       value: CarAI
+      objectReference: {fileID: 0}
+    - target: {fileID: -5556218220344185968, guid: 25fb8166f2a3c734c880d17bf9aee61a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5556218220344185968, guid: 25fb8166f2a3c734c880d17bf9aee61a, type: 3}
       propertyPath: m_TagString
@@ -69,12 +77,24 @@ PrefabInstance:
       value: CarPart
       objectReference: {fileID: 0}
     - target: {fileID: 2723507774228572654, guid: 25fb8166f2a3c734c880d17bf9aee61a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723507774228572654, guid: 25fb8166f2a3c734c880d17bf9aee61a, type: 3}
       propertyPath: m_TagString
       value: CarPart
       objectReference: {fileID: 0}
     - target: {fileID: 4409164694685651021, guid: 25fb8166f2a3c734c880d17bf9aee61a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409164694685651021, guid: 25fb8166f2a3c734c880d17bf9aee61a, type: 3}
       propertyPath: m_TagString
       value: CarPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404172067640770184, guid: 25fb8166f2a3c734c880d17bf9aee61a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5404172067640770184, guid: 25fb8166f2a3c734c880d17bf9aee61a, type: 3}
       propertyPath: m_TagString
