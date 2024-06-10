@@ -53,9 +53,10 @@ public class CarHandler : MonoBehaviour
     // Update is called once per frames
     void Update()
     {
-        if (isForceToExplode)
+        if (isForceToExplode && !gameEnded)
         {
             forceToExplode();
+            gameEnded = true;
             return;
         }
 
@@ -195,7 +196,7 @@ public class CarHandler : MonoBehaviour
             gameEnded = true;
         }
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         ScoreUI.Instance.ViewEndingPanel();
     }
@@ -220,15 +221,19 @@ public class CarHandler : MonoBehaviour
         audioManager.StopSFX();
         audioManager.PlaySFX_OneTime(audioManager.CarCrash);
         
-        StartCoroutine( SlowDownTimeCO() );
+        if (!gameEnded)
+            StartCoroutine( SlowDownTimeCO() );
     }
 
     private void forceToExplode()
     {
-        Vector3 velocity = new Vector3(0.01f, 0.01f, 0.01f);
+        Vector3 velocity = new Vector3(0, 0, 0);
         explodeHandler.Explode(velocity * 15);
 
         isExploded = true;
+
+        audioManager.StopSFX();
+        audioManager.PlaySFX_OneTime(audioManager.CarCrash);
 
         StartCoroutine( SlowDownTimeCO() );
     }
