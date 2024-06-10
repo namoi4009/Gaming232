@@ -227,7 +227,7 @@ public class CarHandler : MonoBehaviour
 
     private void forceToExplode()
     {
-        Vector3 velocity = new Vector3(0, 0, 0);
+        Vector3 velocity = rb.velocity;
         explodeHandler.Explode(velocity * 15);
 
         isExploded = true;
